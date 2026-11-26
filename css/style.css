@@ -125,6 +125,24 @@ body {
 .stat-accent { color: var(--green); }
 .stat-label { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
 
+/* ---------- Tabs ---------- */
+.tabs { display: flex; gap: 10px; margin: 6px 0 16px; }
+.tab {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--card); border: 1px solid var(--border); color: var(--text-dim);
+  font: inherit; font-size: 15px; font-weight: 700; padding: 12px 22px; border-radius: 14px;
+  cursor: pointer; transition: 0.2s;
+}
+.tab:hover { color: var(--text); border-color: var(--accent); }
+.tab.active {
+  background: linear-gradient(135deg, rgba(0, 112, 243, 0.25), rgba(0, 194, 255, 0.12));
+  border-color: var(--accent); color: #fff;
+  box-shadow: 0 4px 18px rgba(0, 112, 243, 0.25);
+}
+.tab-emoji { font-size: 16px; }
+.tab-count { font-size: 12px; font-weight: 600; color: var(--text-dim); background: rgba(255,255,255,0.07); padding: 2px 8px; border-radius: 999px; }
+.tab.active .tab-count { color: var(--accent-2); }
+
 /* ---------- Toolbar ---------- */
 .toolbar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 10px 0 24px; }
 .search-wrap {
@@ -157,6 +175,15 @@ body {
   cursor: pointer; outline: none;
 }
 .sort-select option { background: var(--bg-soft); }
+
+.price-range { display: flex; align-items: center; gap: 6px; color: var(--text-dim); }
+.price-range input {
+  width: 92px; background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+  color: var(--text); font: inherit; font-size: 13px; padding: 10px 10px; outline: none;
+}
+.price-range input:focus { border-color: var(--accent); }
+.price-range input::-webkit-outer-spin-button, .price-range input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.price-range input[type=number] { -moz-appearance: textfield; appearance: textfield; }
 
 /* ---------- Grid & cards ---------- */
 .grid {
@@ -199,6 +226,26 @@ body {
 .card-heart:hover { background: rgba(255, 84, 112, 0.35); transform: scale(1.1); }
 .card-heart.active { color: var(--danger); }
 .card-heart svg { width: 17px; height: 17px; }
+
+.card-bell {
+  position: absolute; top: 48px; right: 8px; width: 34px; height: 34px;
+  border: 0; border-radius: 50%; background: rgba(7, 11, 20, 0.6); backdrop-filter: blur(6px);
+  color: #fff; cursor: pointer; display: grid; place-items: center; transition: 0.2s;
+}
+.card-bell:hover { background: rgba(0, 112, 243, 0.45); transform: scale(1.1); }
+.card-bell.active { color: var(--accent-2); background: rgba(0, 112, 243, 0.35); }
+.card-bell svg { width: 16px; height: 16px; }
+
+.badge-new { background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: #fff; box-shadow: 0 3px 12px rgba(0, 194, 255, 0.4); }
+
+/* ---------- Toast ---------- */
+.toast {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 200;
+  background: var(--bg-soft); border: 1px solid var(--accent); border-radius: 14px;
+  color: var(--text); font-size: 13.5px; padding: 12px 18px; max-width: min(560px, 90vw);
+  box-shadow: var(--shadow); animation: modalIn 0.25s ease; text-align: center; line-height: 1.5;
+}
+.toast a { color: var(--accent-2); }
 
 .card-body { padding: 12px 14px 14px; }
 .card-name {
