@@ -1,0 +1,35 @@
+[
+  {
+    "code": "en-IN",
+    "country": "IN",
+    "flag": "🇮🇳",
+    "currency": "INR",
+    "symbol": "₹",
+    "name": {
+      "ru": "Индия",
+      "en": "India"
+    }
+  },
+  {
+    "code": "uk-UA",
+    "country": "UA",
+    "flag": "🇺🇦",
+    "currency": "UAH",
+    "symbol": "₴",
+    "name": {
+      "ru": "Украина",
+      "en": "Ukraine"
+    }
+  },
+  {
+    "code": "tr-TR",
+    "country": "TR",
+    "flag": "🇹🇷",
+    "currency": "TRY",
+    "symbol": "₺",
+    "name": {
+      "ru": "Турция",
+      "en": "Turkey"
+    }
+  }
+]
